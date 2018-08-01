@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CoordinatorLayoutTest</string>
+    <string name="run">我奔跑在我孤傲的路上，使然看不见终点和希望，有太多火焰冷却我的理想，我依然燃烧我仍在信仰。</string>
+    <string name="emma">emma</string>
+    <string name="star">star</string>
+    <string name="user">user</string>
+    <string name="dashboard">首页</string>
+    <string name="event">事项</string>
+    <string name="headset">音乐</string>
+    <string name="forum">消息</string>
+    <string name="settings">设置</string>
+    <string name="about_us">关于我们</string>
+    <string name="others">其他</string>
 </resources>
