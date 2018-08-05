@@ -56,6 +56,7 @@
             android:layout_margin="10dp"
             android:clickable="true"
             android:focusable="true"
+            android:src="@drawable/ic_discuss"
             app:layout_anchor="@+id/main_content"
             app:layout_anchorGravity="bottom|right|end"/>
 
