@@ -1,7 +1,9 @@
 package com.star.coordinatorlayouttest;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -25,6 +27,7 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
     private ActionBar mActionBar;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
+    private FloatingActionButton mFloatingActionButton;
 
     private FragmentAdapter mFragmentAdapter;
 
@@ -61,6 +64,10 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
                 return true;
             });
         }
+
+        mFloatingActionButton = findViewById(R.id.floating_action_button);
+        mFloatingActionButton.setOnClickListener(v ->
+                Snackbar.make(v, "点击成功", Snackbar.LENGTH_SHORT).show());
     }
 
     private void initViewPager() {
