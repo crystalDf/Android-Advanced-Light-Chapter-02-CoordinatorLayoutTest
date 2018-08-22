@@ -12,4 +12,5 @@
     <string name="about_us">关于我们</string>
     <string name="others">其他</string>
     <string name="mao">机器猫</string>
+    <string name="custom_behavior">custom behavior</string>
 </resources>
