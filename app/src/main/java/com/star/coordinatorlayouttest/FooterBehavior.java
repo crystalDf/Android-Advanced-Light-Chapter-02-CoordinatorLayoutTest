@@ -16,4 +16,9 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
     public boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View directTargetChild, @NonNull View target, int axes, int type) {
         return super.onStartNestedScroll(coordinatorLayout, child, directTargetChild, target, axes, type);
     }
+
+    @Override
+    public void onNestedPreScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View target, int dx, int dy, @NonNull int[] consumed, int type) {
+        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);
+    }
 }
