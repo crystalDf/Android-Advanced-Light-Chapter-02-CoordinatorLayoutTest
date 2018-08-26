@@ -9,6 +9,8 @@ import android.view.View;
 
 public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
 
+    private int directionChange;
+
     public FooterBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
