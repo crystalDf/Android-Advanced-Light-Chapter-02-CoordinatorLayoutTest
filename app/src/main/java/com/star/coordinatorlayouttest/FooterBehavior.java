@@ -23,5 +23,12 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
     @Override
     public void onNestedPreScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View target, int dx, int dy, @NonNull int[] consumed, int type) {
         super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);
+
+        if (dy * directionChange < 0) {
+            child.animate().cancel();
+            directionChange = 0;
+        }
+
+        directionChange += dy;
     }
 }
