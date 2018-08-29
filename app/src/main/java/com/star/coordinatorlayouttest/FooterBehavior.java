@@ -4,8 +4,10 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewPropertyAnimator;
 
 public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
 
@@ -41,6 +43,8 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
     }
 
     private void hide(View child) {
+
+        ViewPropertyAnimator animator = child.animate().translationY(child.getHeight()).setInterpolator(new FastOutSlowInInterpolator()).setDuration(200);
     }
 
     private void show(View child) {
