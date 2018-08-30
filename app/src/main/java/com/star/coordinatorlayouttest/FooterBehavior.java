@@ -1,5 +1,7 @@
 package com.star.coordinatorlayouttest;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
@@ -49,6 +51,15 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
                         .translationY(child.getHeight())
                         .setInterpolator(new FastOutSlowInInterpolator())
                         .setDuration(200);
+
+        animator.setListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                child.setVisibility(View.GONE);
+            }
+        });
+
+        animator.start();
     }
 
     private void show(View child) {
