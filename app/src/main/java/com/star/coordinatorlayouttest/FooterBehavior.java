@@ -63,5 +63,20 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
     }
 
     private void show(View child) {
+
+        ViewPropertyAnimator animator = child
+                .animate()
+                .translationY(0)
+                .setInterpolator(new FastOutSlowInInterpolator())
+                .setDuration(200);
+
+        animator.setListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                child.setVisibility(View.VISIBLE);
+            }
+        });
+
+        animator.start();
     }
 }
