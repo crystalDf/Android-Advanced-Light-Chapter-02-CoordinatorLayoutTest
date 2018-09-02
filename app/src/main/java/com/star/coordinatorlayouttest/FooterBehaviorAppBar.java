@@ -17,4 +17,14 @@ public class FooterBehaviorAppBar extends CoordinatorLayout.Behavior<View> {
     public boolean layoutDependsOn(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
         return dependency instanceof AppBarLayout;
     }
+
+    @Override
+    public boolean onDependentViewChanged(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
+
+        float translationY = Math.abs(dependency.getY());
+
+        child.setTranslationY(translationY);
+
+        return true;
+    }
 }
