@@ -1,12 +1,12 @@
 package com.star.coordinatorlayouttest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 public class RecyclerViewAdapter extends
         RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> {
@@ -33,8 +33,11 @@ public class RecyclerViewAdapter extends
 
         View view = holder.itemView;
 
-        view.setOnClickListener(v ->
-                Toast.makeText(mContext, "奔跑在孤傲的路上", Toast.LENGTH_LONG).show());
+        view.setOnClickListener(v -> {
+
+            Intent intent = new Intent(mContext, CollapsingToolbarActivity.class);
+            mContext.startActivity(intent);
+        });
     }
 
     @Override

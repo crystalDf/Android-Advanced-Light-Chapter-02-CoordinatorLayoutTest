@@ -20,7 +20,6 @@ public class CollapsingToolbarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_collapsing_toolbar_layout);
 
         mToolbar = findViewById(R.id.toolbar);
-
         setSupportActionBar(mToolbar);
 
         mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar_layout);

@@ -47,10 +47,10 @@ public class FooterBehavior extends CoordinatorLayout.Behavior<View> {
     private void hide(View child) {
 
         ViewPropertyAnimator animator = child
-                        .animate()
-                        .translationY(child.getHeight())
-                        .setInterpolator(new FastOutSlowInInterpolator())
-                        .setDuration(200);
+                .animate()
+                .translationY(child.getHeight())
+                .setInterpolator(new FastOutSlowInInterpolator())
+                .setDuration(200);
 
         animator.setListener(new AnimatorListenerAdapter() {
             @Override
