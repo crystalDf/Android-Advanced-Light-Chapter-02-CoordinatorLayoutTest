@@ -52,7 +52,6 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
         if (mNavigationView != null) {
 
             mNavigationView.setNavigationItemSelectedListener(item -> {
-
                 item.setChecked(true);
 
                 String title = item.getTitle().toString();
